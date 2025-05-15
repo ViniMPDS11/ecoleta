@@ -63,6 +63,7 @@
     margin-top: 40px;
     transition: background-color 400ms ease-in-out;
     color: white;
+    cursor: pointer;
 }
 
 #page-home main a:hover {

@@ -1,6 +1,25 @@
 const ufSelect = document.querySelector('select[name=state]');
 const citySelect = document.querySelector('select[name=city]');
+const collectionItems = document.querySelectorAll('.items-grid li');
+const collectedItems = document.querySelector('input[name=items]');
+let selectedItems = [];
 
+for (const item of collectionItems) {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const dataId = item.getAttribute('data-id');
+
+        if (selectedItems.includes(dataId)) {
+            selectedItems = selectedItems.filter(item => item !== dataId);
+        } else {
+            selectedItems.push(dataId);
+        }
+
+        collectedItems.value = selectedItems;
+    })
+}
+
+populateUFs();
 ufSelect.addEventListener("change", () => {
     const selectedOption = ufSelect.options[ufSelect.selectedIndex];
     const dataId = selectedOption.getAttribute('data-id');
@@ -12,8 +31,6 @@ ufSelect.addEventListener("change", () => {
         citySelect.disabled = false;
     }
 })
-
-populateUFs();
 
 async function populateUFs() {
     try {
