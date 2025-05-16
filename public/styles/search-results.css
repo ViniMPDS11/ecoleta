@@ -9,7 +9,7 @@ body::after {
     left: 0;
     right: 0;
     top: 225px;
-    height: 100%;
+    height: calc(100% - 225px);
     background-color: white;
     z-index: -1;
 }
@@ -24,7 +24,6 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
 }
 
 #page-search-results header a {

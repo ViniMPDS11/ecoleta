@@ -1,3 +1,7 @@
+body {
+    padding-top: 3rem;
+}
+
 :root {
     --title-color: #322153;
     --primary-color: #34cb79;

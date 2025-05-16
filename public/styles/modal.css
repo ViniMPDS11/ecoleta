@@ -31,6 +31,7 @@
     background-image: url('../assets/x.svg');
     width: 20px;
     height: 20px;
+    aspect-ratio: 1/1;
     font-size: 0.01px;
     cursor: pointer;
 }
@@ -61,6 +62,7 @@
     font-size: 16px;
     color: #6c6c80;
     outline: unset;
+    width: calc(100% - 72px);
 }
 
 #modal form button {
@@ -70,6 +72,7 @@
     border: unset;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 #modal form button:hover {
